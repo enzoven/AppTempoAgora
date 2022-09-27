@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTempoAgora.MainPage">
+
+<StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#545454">
+            <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+            <Label Text="Procurar Cidade" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
+                <Label x:Name="cidadeLabel" Text="Digite o nome da Cidade" TextColor="Yellow" FontSize="Small" />
+                <Entry x:Name="cidadeEntry"/>
+            </StackLayout> 
+            <StackLayout Padding="0,0,0,10" VerticalOptions="End">
+                <Button x:Name="btnPrevisao" Text="Previsão do Tempo" WidthRequest="185"
+                                BorderWidth="1" Clicked="btnPrevisao_Clicked"/>
+                
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+                <Image x:Name="imgTempo" />
+                <Label Text="Local" />
+                <Label Text="{Binding Title}" TextColor="Black" />
+                <Label Text="Temperatura" />
+                <Label x:Name="tempLabel" TextColor="Black" Text="{Binding Temperature}" />
+                <Label Text="Veloc. Vento" />
+                <Label x:Name="windLabel" Text="{Binding Wind}" TextColor="Black" />
+                <Label Text="Humidade" />
+                <Label x:Name="humidityLabel" Text="{Binding Humidity}" TextColor="Black"/>
+                <Label Text="Visibilidade" />
+                <Label x:Name="visibilitylabel" Text="{Binding Visibility}" TextColor="Black"/>
+                <Label Text="Hora Nascimento Sol" />
+                <Label x:Name="sunriseLabel" Text="{Binding Sunrise}" TextColor="Black" />
+                <Label Text="Hora do sol ir dormir" />
+                <Label x:Name="sunsetLabel" Text="{Binding Sunset}" TextColor="Black" />
+            </StackLayout>
+        </StackLayout>
+            
+    </ContentPage>
