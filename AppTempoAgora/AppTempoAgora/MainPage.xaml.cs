@@ -25,8 +25,14 @@ namespace AppTempoAgora
             {
                 if (!String.IsNullOrEmpty(cidadeEntry.Text))
                 {
-                    // acabar parte do tempo aqui
+                    Tempo previsaoDoTempo = await DataService.GetPrevisaoDoTempo(cidadeEntry.Text);
+                    this.BindingContext = previsaoDoTempo;
+                    btnPrevisao.Text = "Nova Previsão";
                 }
+            }
+            catch (Exception ex)
+            {
+            await DisplayAlert("Erro ", em.Message, "OK");
             }
         }
     }
