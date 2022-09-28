@@ -21,8 +21,8 @@ namespace AppTempoAgora.Services
             {
                 Tempo previsao = new Tempo();
                 previsao.Title = (string)resultado["name"];
-                previsao.Temperature = (string)resultado["main"]["temp"] + "C";
-                previsao.Wind = (string)resultado["wind"]["speed"] + "mph";
+                previsao.Temperature = (string)resultado["main"]["temp"] + "°C";
+                previsao.Wind = (string)resultado["wind"]["speed"] + "MPH";
                 previsao.Humidity = (string)resultado["main"]["humidity"] + "%";
                 previsao.Visiblity = (string)resultado["weather"][0]["main"];
                 DateTime time = new DateTime(1970, 1, 1, 0, 0, 0, 0);
