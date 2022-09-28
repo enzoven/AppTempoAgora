@@ -7,7 +7,7 @@
     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#545454">
             <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
             <Label Text="Procurar Cidade" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
-                <Label x:Name="cidadeLabel" Text="Digite o nome da Cidade" TextColor="Yellow" FontSize="Small" />
+                  <Label x:Name="cidadeLabel" Text="Digite o nome da Cidade" TextColor="White" FontSize="Medium" />
                 <Entry x:Name="cidadeEntry"/>
             </StackLayout> 
             <StackLayout Padding="0,0,0,10" VerticalOptions="End">
