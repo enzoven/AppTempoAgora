@@ -15,7 +15,7 @@ namespace AppTempoAgora.Services
         {
             string appId = "2add377c7a2190f47925c0117c924901";
 
-            string queryString = "https://home.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric" + "&appid=" + appId;
+            string queryString = "https://home.openweathermap.org/api_keys" + cidade + "&units=metric" + "&appid=" + appId;
             dynamic resultado = await getDataFromService(queryString).ConfigureAwait(false);
             if (resultado["weather"] != null)
             {
@@ -55,7 +55,7 @@ namespace AppTempoAgora.Services
         {
             string appId = "2add377c7a2190f47925c0117c924901";
 
-            string url = string.Format("https://home.openweathermap.org/data/2.5/weather?q={0}&units=metric&cnt=1&APPID={1}", city.Trim(), appId);
+            string url = string.Format("https://home.openweathermap.org/api_keys", city.Trim(), appId);
             HttpClient client = new HttpClient();
             var response = await client.GetAsync(url);
             dynamic data = null;

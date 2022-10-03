@@ -4,33 +4,34 @@
              x:Class="AppTempoAgora.MainPage">
 
 <StackLayout>
-    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#545454">
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="SteelBlue"
+                 >
             <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
             <Label Text="Procurar Cidade" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
                   <Label x:Name="cidadeLabel" Text="Digite o nome da Cidade" TextColor="White" FontSize="Medium" />
                 <Entry x:Name="cidadeEntry"/>
             </StackLayout> 
-            <StackLayout Padding="0,0,0,10" VerticalOptions="End">
-                <Button x:Name="btnPrevisao" Text="Previsão do Tempo" WidthRequest="185"
+            <StackLayout Padding="0,0,0,5" VerticalOptions="End">
+                <Button x:Name="btnPrevisao" Text="Previsão do Tempo"
                                 BorderWidth="1" Clicked="btnPrevisao_Clicked"/>
                 
                 </StackLayout>
             </StackLayout>
             <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
                 <Image x:Name="imgTempo" />
-                <Label Text="Local" />
-                <Label Text="{Binding Title}" TextColor="Black" />
-                <Label Text="Temperatura" />
+                <Label Text="Local:" FontAttributes="Bold" />
+                <Label Text="{Binding Title}" TextColor="Black" FontAttributes="Bold" />
+                <Label Text="Temperatura:" FontAttributes="Bold" />
                 <Label x:Name="tempLabel" TextColor="Black" Text="{Binding Temperature}" />
-                <Label Text="Veloc. Vento" />
+                <Label Text="Veloc. Vento:" FontAttributes="Bold" />
                 <Label x:Name="windLabel" Text="{Binding Wind}" TextColor="Black" />
-                <Label Text="Humidade" />
+                <Label Text="Humidade:" FontAttributes="Bold" />
                 <Label x:Name="humidityLabel" Text="{Binding Humidity}" TextColor="Black"/>
-                <Label Text="Visibilidade" />
+                <Label Text="Visibilidade:" FontAttributes="Bold" />
                 <Label x:Name="visibilitylabel" Text="{Binding Visibility}" TextColor="Black"/>
-                <Label Text="Hora Nascimento Sol" />
+                <Label Text="Hora do nascer do sol:" FontAttributes="Bold" />
                 <Label x:Name="sunriseLabel" Text="{Binding Sunrise}" TextColor="Black" />
-                <Label Text="Hora do sol ir dormir" />
+                <Label Text="Hora do pôr do sol:" FontAttributes="Bold" />
                 <Label x:Name="sunsetLabel" Text="{Binding Sunset}" TextColor="Black" />
             </StackLayout>
         </StackLayout>

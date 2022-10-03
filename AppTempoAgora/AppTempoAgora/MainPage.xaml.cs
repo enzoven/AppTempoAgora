@@ -32,7 +32,7 @@ namespace AppTempoAgora
             }
             catch (Exception ex)
             {
-            await DisplayAlert("Erro ", em.Message, "OK");
+            await DisplayAlert("Erro ", ex.Message, "OK");
             }
         }
     }
